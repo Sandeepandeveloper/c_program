@@ -1,5 +1,5 @@
 #include<stdio.h>
-void main()
+int main()
 {
 	int C,F;
 	printf("enter a temperature in Centigrade\n");
