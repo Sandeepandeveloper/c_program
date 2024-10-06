@@ -1,0 +1,509 @@
+//wap take a number keyboad check 
+
+
+switch  case statement
+____________________________
+
+else if ladder  alternate  switch case 
+
+
+switch(expression)
+{
+	
+	case label:stmt;break;
+	.
+	.
+	.
+	.
+	default : 
+}
+
+switch case break default all  are keyword.
+expression must be integral type(char ,int )variable,constant)
+not allow  float double string
+
+switch(3.5)
+{
+	
+}
+
+// error
+
+
+switch("hi")
+{
+	
+}
+
+// error
+
+
+switch(3)
+{
+	
+}
+//valid
+
+switch('a')
+{
+	
+}
+
+//valid
+
+case lable must integer constant (int,char)   not allow variable
+
+other constant (real ,string not allow)
+
+
+case 3:    valid
+
+case 'a' :  valid
+
+case  "hi" : invalid
+case 3.5 " :   invalid "
+
+case label any order  (random order )
+what are the value generate switch expression match which case that point to execute.
+
+#include<stdio.h>
+void main()
+{
+	  switch(3)
+	  {
+	     case 2:printf("A");
+	     case 3:printf("B");
+	     case 1:printf("C");
+	  }
+}
+
+o/p:
+BC
+
+#include<stdio.h>
+void main()
+{
+	  switch(2)
+	  {
+	     case 2:printf("A");
+	     case 3:printf("B");
+	     case 1:printf("C");
+	  }
+}
+
+o/p:
+ABC
+
+
+break:
+it is a keyword .
+it is used to prevent next case.
+
+#include<stdio.h>
+void main()
+{
+	  switch(3)
+	  {
+	     case 2:printf("A");break;
+	     case 3:printf("B");break;
+	     case 1:printf("C");
+	  }
+}
+
+o/p: B
+
+
+
+ 
+
+o/p: 
+no output
+
+There is no case match no error no output.
+
+
+default :
+it is a keyword.
+There is no case match default execute.
+
+#include<stdio.h>
+void main()
+{
+	  switch(4)
+	  {
+	     case 2:printf("A");break;
+	     case 3:printf("B");break;
+	     case 1:printf("C");break;
+	     default :printf("no match");
+	  }
+}
+
+o/p:
+no match
+
+#include<stdio.h>
+void main()
+{
+	  switch(4)
+	  {
+	     
+	     default :printf("no match");
+	     case 2:printf("A");break;
+	     case 3:printf("B");break;
+	     case 1:printf("C");break;
+	     
+	  }
+}
+
+o/p:
+no match
+A
+
+#include<stdio.h>
+void main()
+{
+	  switch(4)
+	  {
+	     
+	     default :printf("no match");break;
+	     case 2:printf("A");break;
+	     case 3:printf("B");break;
+	     case 1:printf("C");break;
+	     
+	  }
+}
+
+o/p:
+no match
+
+duplicate case label not allow.
+case label must be unique.
+#include<stdio.h>
+void main()
+{
+	  switch(4)
+	  {
+	     case 2:printf("A");break;
+	     case 3:printf("B");break;
+	     case 2:printf("C");break;
+	     default :printf("no match");
+	  }
+}
+o/p:
+error
+
+#include<stdio.h>
+void main()
+{
+	  switch(97)
+	  {
+	     case 'a':printf("hi");break;
+	     case 3:printf("bye");break;   
+	  }
+}
+
+o/p:
+hi
+
+#include<stdio.h>
+void main()
+{
+	  switch(97)
+	  {
+	     case 'a':printf("hi");break;
+	     case 3:printf("bye");break;
+	     case 97:printf("ok");   
+	  }
+}
+
+o/p:
+error
+duplicate case value
+
+#include<stdio.h>
+void main()
+{
+	  int ch;
+	  printf("enter  a  number \n");
+	  scanf("%d",&ch);
+	  switch(ch)
+	  {
+	  case 1:printf("hi");break;
+	  case 2:printf("bye");break;
+	  case 3:printf("ok");break;
+	  default :printf("no match");
+	  }
+}
+
+C:\Users\HP\Desktop>a
+enter  a  number
+1
+hi
+C:\Users\HP\Desktop>a
+enter  a  number
+3
+ok
+C:\Users\HP\Desktop>a
+enter  a  number
+5
+no match
+C:\Users\HP\Desktop>a
+enter  a  number
+7
+no match
+
+
+//wap take two number from keyboad  enter your choice 1.add 2.sub 3.mult 
+
+#include<stdio.h>
+void main()
+{
+    int no1,no2,ch;
+    printf("enter two nos\n");
+    scanf("%d %d",&no1,&no2);
+    printf("enter your choice\n1.add\n2.sub\n3mult\n");
+    scanf("%d",&ch);
+    switch(ch)
+    {
+     case 1:printf("sum=%d\n",no1+no2);break;
+      case 2:printf("sub=%d\n",no1-no2);break;
+      case 3:printf("mult=%d\n",no1*no2);break;
+    default :   printf("invalid choice ");
+    }
+}
+
+
+//wap take a number from keyboad check number is even or odd
+#include<stdio.h>
+void main()
+{
+    int no;
+    printf("enter a number\n");
+    scanf("%d",&no);
+    switch(no%2)
+    {
+
+    case 0: printf("even number ");break;
+    default :printf("odd number");
+    }
+}
+
+
+all the case label statment and expression same .
+not write all case write last case.
+
+#include<stdio.h>
+void main()
+{
+	
+	switch(3)
+	{
+	  case 2:printf("hi");break;
+	  case 3:printf("hi");break;
+	  case 1:printf("hi");break;
+	}
+}
+
+o/p:
+hi
+
+#include<stdio.h>
+void main()
+{
+	
+	switch(3)
+	{
+	  case 2:case 3:case 1:printf("hi");break;
+	}
+}
+
+o/p:
+hi
+
+
+
+
+#include<stdio.h>
+void main()
+{
+	int ch=3;
+	switch(ch)
+	{
+	  case 2:
+	  case 3:
+	  case 1:printf("hi");break;
+	}
+}
+
+
+o/p:
+hi
+
+alternate
+#include<stdio.h>
+void main()
+{
+	int ch=3;
+	if(ch==1||ch==2||ch==3)
+	{
+	printf("hi");break;
+	}
+	
+}
+
+
+
+#include<stdio.h>
+void main()
+{
+	char ch;
+	printf("enter a char \n");
+	scanf("%c",&ch);
+	if((ch>='A'&&ch<='Z')||(ch>='a'&&ch<='z'))
+	{
+              switch(ch)
+              {
+
+              		case 'a':case 'A':
+              		case 'e':case 'E':
+              		case 'i':case 'I':
+              		case 'o':case 'O':
+              		case 'u':case 'U':printf("vowel");break;
+              		default :printf("co");
+              }
+	}
+	else
+	{
+	     printf("not alp");
+	}
+}
+C:\Users\HP\Desktop>gcc demo.c
+
+C:\Users\HP\Desktop>a
+enter a char
+B
+co
+C:\Users\HP\Desktop>a
+enter a char
+U
+vowel
+C:\Users\HP\Desktop>a
+enter a char
+6
+not alp
+C:\Users\HP\Desktop>a
+enter a char
+*
+not alp
+C:\Users\HP\Desktop>a
+enter a char
+i
+vowel
+C:\Users\HP\Desktop>
+C:\Users\HP\Desktop>a
+enter a char
+R
+co
+
+
+#include<stdio.h>
+void main()
+{
+      switch(3.5)
+      {
+
+      case 3:printf("hi");
+      }	
+}
+
+
+o/p:
+error
+C:\Users\HP\Desktop>gcc demo.c
+demo.c: In function 'main':
+demo.c:4:14: error: switch quantity not an integer
+    4 |       switch(3.5)
+      |              ^~~
+
+#include<stdio.h>
+void main()
+{
+      switch((int)3.5)
+      {
+
+      case 3:printf("hi");
+      }	
+}
+
+o/p:
+hi
+
+
+nested switch case 
+___________________
+
+write switch case statennet inside switch  case
+
+you write any statemnet inside switch that must under case  or default
+#include<stdio.h>
+void main()
+{
+	
+	switch(1)
+	{
+	    printf("hi");
+	}
+}
+
+o/p:
+no output
+
+
+//wap take a number from keyboad check no is 0 +ve -ve using nested switch case
+#include<stdio.h>
+void main()
+{
+   int no;
+   printf("enter a number \n");
+   scanf("%d",&no);
+   switch(no)
+   {
+     case 0:printf("zero");break;
+     default :switch(no>0)
+     {
+     case 1:printf("+ve ");break;
+     case 0:printf("-ve ");
+     }
+   }
+}
+
+o/p:
+enter a number
+5
++ve
+C:\Users\HP\Desktop>a
+enter a number
+-2
+-ve
+C:\Users\HP\Desktop>a
+enter a number
+0
+zero
+
+program
+______________
+
+electil  bill program
+
+sal   program
+
+shape   program
+
+wap take student 3 mark from keyboad display all mark  total mark and avg mark.
+if avgmark>=90   O grade
+avgmark<90  and avgmark>=70  A grade
+
+avgmark<70 and avgmark>=50  B grade
+avgmark<50 avgmark>=30     C grade
+
+fail
