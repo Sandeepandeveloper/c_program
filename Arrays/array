@@ -1,0 +1,283 @@
+array
+_______________
+#include<stdio.h>
+void main()
+{
+	int a=10;
+	a=20;
+	a=30;
+	printf("%d",a);
+
+}
+o/p:
+30
+
+#include<stdio.h>
+void main()
+{
+	int a=10,b=20,c=30;
+	printf("%d %d %d",a,b,c);
+
+}
+
+o/p:
+10 20 30
+
+array: it is collection of simliar type of elements.
+
+How to declare array
+____________________
+
+
+datatype arrname[size];
+
+int rollno[3];  //rollno is a array collection of 3 integer elements.
+
+double  mark[5]; //mark is array collection of 5 real elements
+
+
+
+array initlization
+_______________________
+
+arrname[index]=element;
+.
+.
+.
+.
+
+
+array initlization in single line
+___________________________________
+
+
+datatype arrname[size]={element,element,..}
+
+int  arr[]={10,20,30}; // 12 byte
+
+int arr[5]={10,20};  //20 byte
+
+
+#include<stdio.h>
+void main()
+{
+	int arr[3];
+
+	printf("%d %d %d",arr[0],arr[1],arr[2]);
+
+}
+
+
+o/p:
+garbage grabage  garbage
+
+
+#include<stdio.h>
+void main()
+{
+	int arr[3];
+    arr[0]=10;
+    arr[1]=20;
+    arr[2]=30;
+	printf("%d %d %d",arr[0],arr[1],arr[2]);
+
+}
+
+o/p:
+10 20 30
+
+
+#include<stdio.h>
+void main()
+{
+	int arr[3]={10,20,30};
+	printf("%d %d %d",arr[0],arr[1],arr[2]);
+
+}
+
+
+
+#include<stdio.h>
+void main()
+{
+	int arr[5]={10,20,30,40,50};
+	int index;
+	for(index=0;index<5;index++)
+	{
+	    	printf("%d ",arr[index]);
+	}
+
+}
+
+o/p:
+10 20 30 40 50
+
+#include<stdio.h>
+void main()
+{
+	int arr[5]={10,20};
+	int index;
+	for(index=0;index<5;index++)
+	{
+	    	printf("%d ",arr[index]);
+	}
+
+}
+o/p:
+10 20 0 0 0
+
+
+//initlize  6 integer element  using array  display first and last element
+
+//initlize  6 integer element   swap first and last element
+
+//initlize  6 integer element   swap 2nd and 4th sum display 
+
+//initlize  6 integer element   check 3rd element  even or odd
+//initlize  6 integer element  using array  display first and last element
+#include<stdio.h>
+void main()
+{
+	int arr[6]={10,20,30,40,50,60};
+	printf("%d  %d",arr[0],arr[5]);
+
+}
+
+//initlize  6 integer element   swap first and last element
+#include<stdio.h>
+void main()
+{
+	int arr[6]={10,20,30,40,50,60};
+	int temp;
+	temp=arr[0];
+	arr[0]=arr[5];
+	arr[5]=temp;
+	printf("%d  %d",arr[0],arr[5]);
+
+}
+
+//initlize  6 integer element   add 2nd and 4th sum display 
+#include<stdio.h>
+void main()
+{
+	int arr[6]={10,20,30,40,50,60};
+	int s;
+	s=arr[1]+arr[3];
+	printf("sum=%d",s);
+
+}
+
+//initlize  6 integer element   check 3rd element  even or odd
+#include<stdio.h>
+void main()
+{
+	int arr[5]={10,20,30,40,50,60};
+	if(arr[2]%2==0)
+	{
+	  printf("even no ");
+	}
+	else
+	{
+	printf("odd no");
+	}
+}
+
+
+
+
+//wap take 5 element from keyboard and display it
+#include<stdio.h>
+void main()
+{
+	int arr[5];
+	int index;
+     printf("enter 5 elements \n");
+     for(index=0;index<5;index++)
+     {
+        scanf("%d",&arr[index]);
+     }
+     printf("elements are ");
+	//display parts
+	for(index=0;index<5;index++)
+	{
+	    	printf("%d ",arr[index]);
+	}
+
+}
+
+//wap take n no of element from keyboard and display it
+#include<stdio.h>
+void main()
+{
+    printf("enter array size ");
+    scanf("%d",&size);
+	int arr[size];
+	int index;
+     printf("enter %d elements \n",size);
+     for(index=0;index<size;index++)
+     {
+        scanf("%d",&arr[index]);
+     }
+     printf("elements are ");
+	//display parts
+	for(index=0;index<size;index++)
+	{
+	    	printf("%d ",arr[index]);
+	}
+
+}
+
+
+//sum of element
+
+//wap take n no of element from keyboard and add it
+#include<stdio.h>
+void main()
+{
+    printf("enter array size ");
+    scanf("%d",&size);
+	int arr[size];
+	int index;
+     printf("enter %d elements \n",size);
+     for(index=0;index<size;index++)
+     {
+        scanf("%d",&arr[index]);
+     }
+    
+     int s=0;
+	//sum of element
+	for(index=0;index<size;index++)
+	{
+	    	s=s+arr[index];
+	}
+    printf("sum of element=%d\n",s);
+}
+
+
+//initlize using  display sum of elemnt using function 
+#include<stdio.h>
+
+void display(int arr[],int size)
+{
+	int index;
+	for(index=0;index<size;index++)
+	{
+	    printf("%d ",arr[i]);
+	}
+}
+void sumele(int arr[],int size)
+{
+	 int index,s=0;
+	 for(index=0;index<size;index++)
+	 {
+	   s=s+arr[index];
+	 }
+	 printf("sum of element=%d",s);
+}
+void main()
+{
+    int arr[]={5,8,9,12,7};
+    int size=sizeof(arr)/sizeof(int);
+    display(arr,size);
+    sumele(arr,size);
+}
